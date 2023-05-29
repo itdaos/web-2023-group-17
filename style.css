@@ -1,13 +1,27 @@
 :root {
   font-size: 14px;
   font-family: "Roboto", sans-serif;
+  color: #242424;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  outline: 1px dotted red;
+}
+
+body {
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+  height: 100%;
 }
 
 a {
@@ -23,6 +37,13 @@ a {
 .row {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
@@ -60,4 +81,229 @@ header .header-controls > a {
 }
 header .header-controls > a:first-child {
   margin-left: 0;
+}
+
+.subscr .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr min-content;
+  gap: 20px;
+  grid-template-areas: "content aside" "steps steps";
+}
+.subscr .container .subscr-steps {
+  grid-area: steps;
+}
+.subscr .container .subscr-steps ol {
+  list-style: none;
+}
+.subscr .container .subscr-steps ol li {
+  flex: 0 0 30%;
+  align-items: flex-start;
+  gap: 10px;
+}
+.subscr .container .subscr-steps ol li .num {
+  border-radius: 10px;
+  background-color: #1b222b;
+  color: #acacac;
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+  font-size: 2rem;
+  border-radius: 100%;
+  text-align: center;
+}
+.subscr .container .subscr-steps ol li h2 {
+  font-size: 2rem;
+}
+.subscr .container .subscr-steps ol li p {
+  font-size: 1.25rem;
+  margin-top: 10px;
+  color: #acacac;
+}
+.subscr .container .subscr-aside {
+  grid-area: aside;
+  flex-grow: 0;
+}
+.subscr .container .subscr-content {
+  grid-area: content;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-right: 30%;
+  gap: 20px;
+}
+.subscr .container .subscr-content h1 {
+  font-size: 3.5rem;
+}
+.subscr .container .subscr-content p {
+  font-size: 1.5rem;
+  color: #acacac;
+}
+
+.btn {
+  border-radius: 30px;
+  padding: 15px 30px;
+  background-color: #1b222b;
+  color: #fafafa;
+  font-size: 2rem;
+}
+
+.top-sellers .top-sellers-items {
+  gap: 40px;
+}
+.top-sellers .top-sellers-items > div {
+  position: relative;
+}
+.top-sellers .top-sellers-items > div .overlay {
+  position: absolute;
+  z-index: 10;
+  bottom: 0;
+  width: 100%;
+  height: 45%;
+  padding: 40px;
+  text-align: center;
+}
+.top-sellers .top-sellers-items > div .overlay h2 {
+  font-size: 2.5rem;
+}
+.top-sellers .top-sellers-items > div .overlay p {
+  font-size: 1.25rem;
+}
+.top-sellers .top-sellers-items > div .overlay .top-seller-btn {
+  border-radius: 10px;
+  width: 80%;
+  background-color: #fafafa;
+  color: #242424;
+  margin-top: 40px;
+}
+
+.promo .promo-items {
+  gap: 20px;
+  align-items: stretch;
+}
+.promo .promo-items .promo-item {
+  flex: 0 0 21%;
+  border-radius: 10px;
+  padding: 80px 40px;
+  border: 0.5px solid #1b222b;
+  gap: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.promo .promo-items .promo-item:hover {
+  background-color: #1b222b;
+  color: #fafafa;
+}
+.promo .promo-items .promo-item h2 {
+  font-size: 2.25rem;
+}
+.promo .promo-items .promo-item p {
+  font-size: 1.25rem;
+  color: #acacac;
+}
+.promo .promo-items .promo-item .icon-container {
+  font-size: 4rem;
+  border-radius: 10px;
+  border: 0.5px solid #1b222b;
+  background-color: #fafafa;
+  color: #242424;
+  padding: 10px;
+}
+
+.qna .qna-accordeon {
+  width: 100%;
+}
+.qna .qna-accordeon .qna-accordeon-item {
+  background-color: #ffeeda;
+  width: 100%;
+  position: relative;
+  padding: 30px 10%;
+}
+.qna .qna-accordeon .qna-accordeon-item p {
+  margin-top: 10px;
+  visibility: hidden;
+}
+.qna .qna-accordeon .qna-accordeon-item.active {
+  background: #fcd7a3;
+}
+.qna .qna-accordeon .qna-accordeon-item.active p {
+  visibility: unset;
+}
+.qna .qna-accordeon .qna-accordeon-item.active button {
+  background-color: #1b222b;
+  color: #fafafa;
+}
+.qna .qna-accordeon .qna-accordeon-item button {
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fafafa;
+  border-radius: 100%;
+  font-size: 1.5rem;
+  line-height: 100%;
+  width: 50px;
+  height: 50px;
+  border: none;
+  box-shadow: none;
+}
+
+.customers .customers-content,
+.customers .customers-aside {
+  flex: 0 0 49%;
+}
+.customers .customers-aside-stack-container {
+  flex-grow: 1;
+}
+.customers .customers-aside-controls {
+  font-size: 2.5rem;
+}
+.customers .customers-aside-stack {
+  position: relative;
+}
+.customers .customers-aside-stack .card {
+  width: 500px;
+  height: 260px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 50px 30px;
+  font-size: 1.1rem;
+  position: relative;
+  z-index: 5;
+  box-shadow: 4px 4px 20px #acacac;
+  background-color: #1b222b;
+  color: #fafafa;
+  align-items: flex-start;
+}
+.customers .customers-aside-stack .card .author {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.customers .customers-aside-stack .card .author .subcaption {
+  font-weight: 500;
+  font-size: 1rem;
+}
+.customers .customers-aside-stack .card:not(.customers .customers-aside-stack .card:first-child) {
+  background-color: #fafafa;
+  color: #1b222b;
+}
+.customers .customers-aside-stack .card:nth-child(2) {
+  z-index: 4;
+  margin: -200px 0 0 20px;
+}
+.customers .customers-aside-stack .card:nth-child(3) {
+  z-index: 3;
+  margin: -200px 0 0 40px;
+}
+.customers .customers-aside-stack .card:nth-child(4) {
+  z-index: 2;
+  margin: -200px 0 0 60px;
+}
+
+footer {
+  background-color: #242424;
+  color: #fafafa;
 }/*# sourceMappingURL=style.css.map */
