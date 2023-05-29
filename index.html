@@ -4,256 +4,343 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css"
+    />
     <title>Pet Store</title>
   </head>
   <body>
     <header>
-      <div class="logo"></div>
-      <nav>
-        <ul>
-          <li class="nav-item"><a href="" class="nav-link active"></a></li>
-          <li class="nav-item"><a href="" class="nav-link"></a></li>
-          <li class="nav-item"><a href="" class="nav-link"></a></li>
-          <li class="nav-item"><a href="" class="nav-link"></a></li>
-        </ul>
-      </nav>
-      <div class="header-controls">
-        <div id="profile"></div>
-        <div id="cart"></div>
-        <div id="search"></div>
+      <div class="container row">
+        <div class="logo">
+          <img src="img/Logo Petqo.png" alt="Petqo logo" />
+        </div>
+
+        <nav>
+          <ul>
+            <li class="nav-item">
+              <a href="" class="nav-link active">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link">About us</a>
+            </li>
+            <li class="nav-item"><a href="" class="nav-link">Blog</a></li>
+            <li class="nav-item"><a href="" class="nav-link">Shop</a></li>
+          </ul>
+        </nav>
+        <div class="header-controls">
+          <a id="profile"><span class="mdi mdi-account-outline"></span></a>
+          <a id="cart"><span class="mdi mdi-cart-outline"></span></a>
+          <a id="search"><span class="mdi mdi-magnify"></span></a>
+        </div>
       </div>
     </header>
 
     <section class="landing">
-      <div  class="landing-content">
-        <h1>Pet food brand that cares for your pets</h1>
-        <p>
-          Discover makes it easy to serve our feline friends hearty, wholesome meals, keeping them healthy andhappy for all nine of their lives. 
-        </p>
-        <a href="#" class="btn landing-btn">  <img width="10%" src="img/Shop Now Background.png" alt="Shop Now" /> </a>
+      <div class="container">
+        <div class="landing-content">
+          <h1>Pet food brand that cares for your pets</h1>
+          <p>
+            Discover makes it easy to serve our feline friends hearty, wholesome
+            meals, keeping them healthy andhappy for all nine of their lives.
+          </p>
+          <a href="#" class="btn landing-btn">
+            <img src="img/Shop Now Background.png" alt="Shop Now" />
+          </a>
+        </div>
+        <div class="landing-aside">
+          <img src="img/Pop image.png" alt="Pop image" />
+        </div>
       </div>
-      <div class="landing-aside"><img src="img/Pop image.png" alt="Pop image" /></div>
     </section>
 
     <section class="brands">
-      <h1>Brands you know and trust</h1>
-      <div class="brands-items">
-        <img src="img/Royal.png" width="15%" alt="Royal Canin" srcset="" />
-        <img src="img/Canine.png" width="15%" alt="Canine choice" srcset="" />
-        <img src="img/House.png" width="15%" alt="House keeping" srcset="" />
-        <img src="img/Tech.png" width="15%" alt="Tech Crunch" srcset="" />
-        <img src="img/Beco.png" width="15%" alt="Beco" srcset="" />
-        <img src="img/Refinery.png" width="15%" alt="Refinery29" srcset="" />
+      <div class="container">
+        <h1>Brands you know and trust</h1>
+        <div class="brands-items">
+          <img src="img/Royal.png" alt="Royal Canin" />
+          <img src="img/Canine.png" alt="Canine choice" />
+          <img src="img/House.png" alt="House keeping" />
+          <img src="img/Tech.png" alt="Tech Crunch" />
+          <img src="img/Beco.png" alt="Beco" />
+          <img src="img/Refinery.png" alt="Refinery29" />
+        </div>
       </div>
     </section>
 
     <section class="subscr">
-      <div class="subscr-content">
-        <h1>How your subscribtion works?</h1>
-        <p>
-          Pet food subscription makes sure your pet never runs out of food. You can choose to receive regular shipments.
-        </p>
-        <a href="" class="btn subscr-btn"> <img width="10%" src="img/Get Started Background.png" alt="Get Started" /></a>
-      </div>
-      <div class="subscr-aside">
-        <img src="img/Cat + food.png" width="30%" alt="How your subscribtion works" srcset="" />
-      </div>
-      <div class="subscr-steps">
-        <ol>
-          <li>
-            <h2>Tell us about your pup</h2>
-            <p>Take our quick quiz and we'll create a customized subscription meal plan designed just for your pup.</p>
-          </li>
-          <li>
-            <h2>Get your starter box</h2>
-            <p>We'll send you two weeks of freshly cooked food that'll put your pup on the path towards real, meaningful health benefits.</p>
-          </li>
-          <li>
-            <h2>Recieve regular, reliable deliveries</h2>
-            <p>After your starter box you'll receive regularly scheduled deliveries of fresh food right to your door.</p>
-          </li>
-        </ol>
+      <div class="container">
+        <div class="subscr-content">
+          <h1>How your subscribtion works?</h1>
+          <p>
+            Pet food subscription makes sure your pet never runs out of food.
+            You can choose to receive regular shipments.
+          </p>
+          <a href="" class="btn subscr-btn">
+            <img src="img/Get Started Background.png" alt="Get Started"
+          /></a>
+        </div>
+        <div class="subscr-aside">
+          <img src="img/Cat + food.png" alt="How your subscribtion works" />
+        </div>
+        <div class="subscr-steps">
+          <ol>
+            <li>
+              <h2>Tell us about your pup</h2>
+              <p>
+                Take our quick quiz and we'll create a customized subscription
+                meal plan designed just for your pup.
+              </p>
+            </li>
+            <li>
+              <h2>Get your starter box</h2>
+              <p>
+                We'll send you two weeks of freshly cooked food that'll put your
+                pup on the path towards real, meaningful health benefits.
+              </p>
+            </li>
+            <li>
+              <h2>Recieve regular, reliable deliveries</h2>
+              <p>
+                After your starter box you'll receive regularly scheduled
+                deliveries of fresh food right to your door.
+              </p>
+            </li>
+          </ol>
+        </div>
       </div>
     </section>
 
     <section class="top-sellers">
-      <h1>Our top sellers</h1>
-      <div class="top-sellers-items">
-        <div>
-          <img src="img/Fair car red.png" width="30%" alt="Fair car red" class="product-pic" />
-          <p class="name">Grain Friendly</p>
-          <h2 class="components">Organic Chicken, Brown Rice</h2>
-          <a href="" class="btn top-seller-btn"></a>
-        </div>
-        <div>
-          <img src="img/Fair cat purple.png" width="30%" alt="Fair cat purple" class="product-pic" />
-          <p class="name">Victor Purpose</p>
-          <h2 class="components">Grain-Free Organic Chicken Bundle</h2>
-          <a href="" class="btn top-seller-btn"></a>
-        </div>
-        <div>
-          <img src="img/Fair cat orange.png" width="30%" alt="Fair cat orange" class="product-pic" />
-          <p class="name">American Journey</p>
-          <h2 class="components">Grain-Friendly Salmon Bundle</h2>
-          <a href="" class="btn top-seller-btn"></a>
+      <div class="container">
+        <h1>Our top sellers</h1>
+        <div class="top-sellers-items">
+          <div>
+            <img
+              src="img/Fair car red.png"
+              alt="Fair car red"
+              class="product-pic"
+            />
+            <p class="name">Grain Friendly</p>
+            <h2 class="components">Organic Chicken, Brown Rice</h2>
+            <a href="" class="btn top-seller-btn"></a>
+          </div>
+          <div>
+            <img
+              src="img/Fair cat purple.png"
+              alt="Fair cat purple"
+              class="product-pic"
+            />
+            <p class="name">Victor Purpose</p>
+            <h2 class="components">Grain-Free Organic Chicken Bundle</h2>
+            <a href="" class="btn top-seller-btn"></a>
+          </div>
+          <div>
+            <img
+              src="img/Fair cat orange.png"
+              alt="Fair cat orange"
+              class="product-pic"
+            />
+            <p class="name">American Journey</p>
+            <h2 class="components">Grain-Friendly Salmon Bundle</h2>
+            <a href="" class="btn top-seller-btn"></a>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="promo">
-      <h1>All you require is Petqo pet food</h1>
-      <p>
-        It's everyhting you need to feed your pet while also helping the environment.
-      </p>
-      <div class="promo-items">
-        <div class="promo-item">
-          <div class="icon-container"></div>
-          <h2>Nutritionally Complete</h2>
-          <p>An adult cat could happily live off petqo cat food.</p>
-        </div>
-        <div class="promo-item">
-          <div class="icon-container"></div>
-          <h2>Made by Experts</h2>
-          <p>It’s been developed by leading pet nutritionists.</p>
-        </div>
-        <div class="promo-item">
-          <div class="icon-container"></div>
-          <h2>Loved By Cats</h2>
-          <p>It helps keep teeth and gums healthy, it’s delicious to eat and easy to digest.</p>
-        </div>
-        <div class="promo-item">
-          <div class="icon-container"></div>
-          <h2>Easy On The Planet</h2>
-          <p>Farming bugs uses 70% less land than beef.</p>
+      <div class="container">
+        <h1>All you require is Petqo pet food</h1>
+        <p>
+          It's everyhting you need to feed your pet while also helping the
+          environment.
+        </p>
+        <div class="promo-items">
+          <div class="promo-item">
+            <div class="icon-container"></div>
+            <h2>Nutritionally Complete</h2>
+            <p>An adult cat could happily live off petqo cat food.</p>
+          </div>
+          <div class="promo-item">
+            <div class="icon-container"></div>
+            <h2>Made by Experts</h2>
+            <p>It’s been developed by leading pet nutritionists.</p>
+          </div>
+          <div class="promo-item">
+            <div class="icon-container"></div>
+            <h2>Loved By Cats</h2>
+            <p>
+              It helps keep teeth and gums healthy, it’s delicious to eat and
+              easy to digest.
+            </p>
+          </div>
+          <div class="promo-item">
+            <div class="icon-container"></div>
+            <h2>Easy On The Planet</h2>
+            <p>Farming bugs uses 70% less land than beef.</p>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="qna">
-      <h1>Any Questions?</h1>
-      <p>Web has almost Common the answers</p>
-      <div class="qna-accordeon">
-        <div class="qna-accordeon-item active">
-          <h2>Where is your food made?</h2>
-          <p>Petqo products are proudly manufactured in company-owned facilities in Clinton, Iowa under strict quality control practices.</p>
-        </div>
-        <div class="qna-accordeon-item">
-          <h2>Does Petqo use grains? If so, why?</h2>
-          <p></p>
-        </div>
-        <div class="qna-accordeon-item">
-          <h2>How long does it take to get my order?</h2>
-          <p></p>
-        </div>
-        <div class="qna-accordeon-item">
-          <h2>How much is shipping?</h2>
-          <p></p>
-        </div>
-        <div class="qna-accordeon-item">
-          <h2>What happens if my package gets lost?</h2>
-          <p></p>
+      <div class="container">
+        <h1>Any Questions?</h1>
+        <p>Web has almost Common the answers</p>
+        <div class="qna-accordeon">
+          <div class="qna-accordeon-item active">
+            <h2>Where is your food made?</h2>
+            <p>
+              Petqo products are proudly manufactured in company-owned
+              facilities in Clinton, Iowa under strict quality control
+              practices.
+            </p>
+          </div>
+          <div class="qna-accordeon-item">
+            <h2>Does Petqo use grains? If so, why?</h2>
+            <p></p>
+          </div>
+          <div class="qna-accordeon-item">
+            <h2>How long does it take to get my order?</h2>
+            <p></p>
+          </div>
+          <div class="qna-accordeon-item">
+            <h2>How much is shipping?</h2>
+            <p></p>
+          </div>
+          <div class="qna-accordeon-item">
+            <h2>What happens if my package gets lost?</h2>
+            <p></p>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="customers">
-      <div class="customers-content">
-        <h1>Customer Testimonials</h1>
-        <p>
-          The most rewarding part of our job is hearing from people whose pets are living better, more energetic lives.
-        </p>
-        <a href="" class="btn customers-btn"><img src="img/See all story Background.png" width="10%" alt="See all story" /></a>
-      </div>
-      <div class="customers-aside">
-        <img src="" alt="" />
-        <!-- TODO: figure out what to do with these cards -->
+      <div class="container">
+        <div class="customers-content">
+          <h1>Customer Testimonials</h1>
+          <p>
+            The most rewarding part of our job is hearing from people whose pets
+            are living better, more energetic lives.
+          </p>
+          <a href="" class="btn customers-btn"
+            ><img src="img/See all story Background.png" alt="See all story"
+          /></a>
+        </div>
+        <div class="customers-aside">
+          <!-- <img src="" alt="" /> -->
+          <!-- TODO: figure out what to do with these cards -->
+        </div>
       </div>
     </section>
 
     <footer>
-      <div class="info">
-        <div class="logo"><img src="img/Logo Petqo.png" width="20%" alt="Petqo logo" /></div>
-        <p></p>
-      </div>
-      <br />
-      <div class="links">
-        <div class="newsletter">
-          <h2>Subscribe to our newsletter</h2>
-          <p>Lorem ipsum dolor sit amet.</p>
-          <form action="" method="post">
-            <input type="email" name="newsletter-email" id="newsletter-email" />
-            <a href="" class="btn subscr-btn"><img width="10%" src="img/Subscribe Background.png" alt="Subscribe" /></a>
-          </form>
+      <div class="container">
+        <div class="info">
+          <div class="logo">
+            <img src="img/Logo Petqo.png" alt="Petqo logo" />
+          </div>
+          <p></p>
         </div>
-        <div class="top-categories">
-          <h2>Top Categories</h2>
-          <ul>
-            <li><a href="">Dog</a></li>
-            <li><a href="">Cat</a></li>
-            <li><a href="">Horse</a></li>
-            <li><a href="">Bird</a></li>
-            <li><a href="">Homeopathy</a></li>
-          </ul>
-        </div>
-        <div class="food">
-          <h2>Food</h2>
-          <ul>
-            <li><a href="">Grade Fresh</a></li>
-            <li><a href="">Dried Raw</a></li>
-            <li><a href="">The Pantry</a></li>
-            <li><a href="">Smalls Reviews</a></li>
-            <li><a href="">Cat Nutrition</a></li>
-          </ul>
-        </div>
-        <div class="learn">
-          <h2>Learn</h2>
-          <ul>
-            <li><a href="">FAQs</a></li>
-            <li><a href="">Blog</a></li>
-            <li><a href="">About us</a></li>
-            <li><a href="">Contact</a></li>
-          </ul>
-        </div>
-        <div class="utility">
-          <h2>Utility pages</h2>
-          <div class="utility-item">
-            <img src="img/Email icon.png" width="5%" alt="" />
-            <div>
-              <h3>Email</h3>
-              <p></p>
+        <br />
+        <div class="links">
+          <div class="newsletter">
+            <h2>Subscribe to our newsletter</h2>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <form action="" method="post">
+              <input
+                type="email"
+                name="newsletter-email"
+                id="newsletter-email"
+              />
+              <a href="" class="btn subscr-btn"
+                ><img src="img/Subscribe Background.png" alt="Subscribe"
+              /></a>
+            </form>
+          </div>
+          <div class="top-categories">
+            <h2>Top Categories</h2>
+            <ul>
+              <li><a href="">Dog</a></li>
+              <li><a href="">Cat</a></li>
+              <li><a href="">Horse</a></li>
+              <li><a href="">Bird</a></li>
+              <li><a href="">Homeopathy</a></li>
+            </ul>
+          </div>
+          <div class="food">
+            <h2>Food</h2>
+            <ul>
+              <li><a href="">Grade Fresh</a></li>
+              <li><a href="">Dried Raw</a></li>
+              <li><a href="">The Pantry</a></li>
+              <li><a href="">Smalls Reviews</a></li>
+              <li><a href="">Cat Nutrition</a></li>
+            </ul>
+          </div>
+          <div class="learn">
+            <h2>Learn</h2>
+            <ul>
+              <li><a href="">FAQs</a></li>
+              <li><a href="">Blog</a></li>
+              <li><a href="">About us</a></li>
+              <li><a href="">Contact</a></li>
+            </ul>
+          </div>
+          <div class="utility">
+            <h2>Utility pages</h2>
+            <div class="utility-item">
+              <img src="img/Email icon.png" width="5%" alt="" />
+              <div>
+                <h3>Email</h3>
+                <p></p>
+              </div>
+            </div>
+            <div class="utility-item">
+              <img src="img/Call icon.png" width="5%" alt="" />
+              <div>
+                <h3>Call</h3>
+                <p></p>
+              </div>
+            </div>
+            <div class="utility-item">
+              <img src="img/Chat icon.png" width="5%" alt="" />
+              <div>
+                <h3>Chat</h3>
+                <p></p>
+              </div>
             </div>
           </div>
-          <div class="utility-item">
-            <img src="img/Call icon.png" width="5%" alt="" />
-            <div>
-              <h3>Call</h3>
-              <p></p>
-            </div>
-          </div>
-          <div class="utility-item">
-            <img src="img/Chat icon.png" width="5%" alt="" />
-            <div>
-              <h3>Chat</h3>
-              <p></p>
-            </div>
-          </div>
         </div>
-      </div>
-      <br />
-      <div class="connect">
-        <div class="copywrite">
-          <p>
-            (c) 2021 uihut.comz | <a href="">Privacy</a><a href="">Terms</a
-            ><a href="">Contact Us</a>
-          </p>
-        </div>
-        <div class="socials">
-          <a href="" class="social-link"><img width="5%" src="img/Facebook icon.png" alt="Facebook" /></a>
-          <a href="" class="social-link"><img width="5%" src="img/Twitter icon.png" alt="" /></a>
-          <a href="" class="social-link"><img width="5%" src="img/Linkedin icon.png" alt="" /></a>
-          <a href="" class="social-link"><img width="5%" src="img/Instagram icon.png" alt="" /></a>
+        <br />
+        <div class="connect">
+          <div class="copywrite">
+            <p>
+              (c) 2021 uihut.comz | <a href="">Privacy</a><a href="">Terms</a
+              ><a href="">Contact Us</a>
+            </p>
+          </div>
+          <div class="socials">
+            <a href="" class="social-link"
+              ><img width="5%" src="img/Facebook icon.png" alt="Facebook"
+            /></a>
+            <a href="" class="social-link"
+              ><img width="5%" src="img/Twitter icon.png" alt=""
+            /></a>
+            <a href="" class="social-link"
+              ><img width="5%" src="img/Linkedin icon.png" alt=""
+            /></a>
+            <a href="" class="social-link"
+              ><img width="5%" src="img/Instagram icon.png" alt=""
+            /></a>
+          </div>
         </div>
       </div>
     </footer>
+    <script type="module" src="./index.js"></script>
   </body>
 </html>
