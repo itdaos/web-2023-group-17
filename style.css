@@ -303,7 +303,31 @@ header .header-controls > a:first-child {
   margin: -200px 0 0 60px;
 }
 
-footer {
+footer .container {
+  margin-top: 150px;
+  width: 100%;
+  padding: 100px 15%;
   background-color: #242424;
   color: #fafafa;
-}/*# sourceMappingURL=style.css.map */
+  display: flex;
+  flex-direction: column;
+}
+.top-categories a{
+  display: block;
+  text-decoration: none;
+  color: #efefef;
+  margin-bottom: 10;
+}
+
+.food a{
+  display: block;
+  color: #efefef;
+  margin-bottom: 10;
+}
+
+.learn a{
+  display: block;
+  color: #efefef;
+  margin-bottom: 10;
+}
+/*# sourceMappingURL=style.css.map */
