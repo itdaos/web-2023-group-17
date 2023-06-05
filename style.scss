@@ -5,8 +5,24 @@ $primary-color: #242424;
 $secondary-color: #acacac;
 $primary-bg: #fafafa;
 $secondary-bg: #313840;
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == "small" {
+    @media (min-width: 761px) {
+      @content;
+    }
+  } @else if $breakpoint == "medium" {
+    @media (min-width: 961px) {
+      @content;
+    }
+  } @else if $breakpoint == "large" {
+    @media (min-width: 1440px) {
+      @content;
+    }
+  }
+}
+
 :root {
-  font-size: 14px;
   font-family: "Roboto", sans-serif;
   color: $primary-color;
 }
@@ -41,7 +57,10 @@ p {
 }
 
 section:not(.brands) {
-  min-height: 720px;
+  @include respond-to(large) {
+    min-height: 720px;
+  }
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,9 +78,20 @@ a {
 }
 
 .container {
-  width: 1600px;
-  max-width: 1600px;
+  padding: 40px;
   margin: 0 auto;
+  text-align: center;
+
+  @include respond-to(medium) {
+    text-align: left;
+    padding: 40px;
+  }
+
+  @include respond-to(large) {
+    width: 1600px;
+    max-width: 1600px;
+    padding: 0 40px;
+  }
 }
 
 .row {
@@ -82,8 +112,18 @@ header {
   margin-bottom: -40px;
   .logo {
     flex-grow: 0;
-    flex-basis: 20%;
-    padding: 20px 0;
+    flex-basis: 35%;
+    padding: 10px 0;
+
+    @include respond-to(medium) {
+      padding: 15px 0;
+      flex-basis: 25%;
+    }
+
+    @include respond-to(large) {
+      flex-basis: 20%;
+      padding: 20px 0;
+    }
 
     img {
       max-height: 60px;
@@ -91,7 +131,11 @@ header {
   }
 
   nav {
+    display: none;
     flex-grow: 1;
+    @include respond-to(medium) {
+      display: flex;
+    }
 
     ul {
       list-style: none;
@@ -107,8 +151,18 @@ header {
   }
 
   .header-controls {
-    font-size: 2rem;
-    flex-basis: 20%;
+    flex-basis: 35%;
+    font-size: 1.25rem;
+
+    @include respond-to(medium) {
+      font-size: 1.5rem;
+      flex-basis: 25%;
+    }
+
+    @include respond-to(large) {
+      font-size: 2rem;
+      flex-basis: 20%;
+    }
     display: flex;
     justify-content: flex-end;
     gap: 10px;
@@ -128,15 +182,20 @@ header {
   background-color: $accent-color;
 
   .container {
-    padding: 40px 0;
+    padding: 40px;
+    flex-direction: column;
+    text-align: center;
+    @include respond-to(large) {
+      padding: 40px 0;
+    }
   }
 
   .landing-content {
     flex: 0 0 50%;
-    align-items: flex-start;
+    margin-bottom: 20px;
 
     h1 {
-      font-size: 6rem;
+      font-size: 3rem;
     }
 
     h1,
@@ -150,33 +209,56 @@ header {
   .landing-aside {
     flex: 0 0 35%;
   }
+
+  @include respond-to(medium) {
+    .container {
+      flex-direction: row;
+      text-align: left;
+      .landing-content {
+        align-items: flex-start;
+      }
+    }
+  }
 }
 
 .brands {
   .brands-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     margin-top: 20px;
     gap: 20px;
+
+    @include respond-to(medium) {
+      display: flex;
+      flex-direction: row;
+    }
   }
 }
 
 .subscr {
   .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr min-content;
-    gap: 20px;
-    grid-template-areas:
-      "content aside"
-      "steps steps";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     .subscr-steps {
       grid-area: steps;
 
       ol {
         list-style: none;
+        align-items: center;
+        flex-direction: column;
+        @include respond-to(medium) {
+          flex-direction: row;
+        }
         li {
           flex: 0 0 30%;
-          align-items: flex-start;
+          align-items: center;
+
+          @include respond-to(medium) {
+            align-items: flex-start;
+          }
+
           gap: 10px;
 
           .num {
@@ -204,6 +286,7 @@ header {
       }
     }
     .subscr-aside {
+      width: 75%;
       grid-area: aside;
       flex-grow: 0;
     }
@@ -213,8 +296,8 @@ header {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: flex-start;
-      padding-right: 30%;
+      align-items: center;
+
       gap: 20px;
       h1 {
         font-size: 3.5rem;
@@ -225,6 +308,25 @@ header {
         color: $secondary-color;
       }
     }
+
+    @include respond-to(large) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr min-content;
+      gap: 20px;
+      grid-template-areas:
+        "content aside"
+        "steps steps";
+
+      .subscr-content {
+        width: 70%;
+        align-items: flex-start;
+      }
+
+      .subscr-aside {
+        width: 100%;
+      }
+    }
   }
 }
 
@@ -232,7 +334,7 @@ header {
   border-radius: 30px;
   padding: 15px 30px;
   background-color: $accent2-color;
-  color: #fafafa;
+  color: $primary-bg;
   font-size: 2rem;
   box-shadow: none;
   border: none;
@@ -246,8 +348,18 @@ header {
 
 .top-sellers {
   .top-sellers-items {
+    flex-direction: column;
+    width: 100%;
+    @include respond-to(medium) {
+      width: 70%;
+    }
+    @include respond-to(large) {
+      width: 100%;
+      flex-direction: row;
+    }
+
     gap: 40px;
-    > div {
+    .panel {
       position: relative;
       .overlay {
         position: absolute;
@@ -258,6 +370,7 @@ header {
         height: 45%;
         padding: 40px;
         text-align: center;
+        justify-content: flex-end;
 
         h2 {
           font-size: 2.5rem;
@@ -284,6 +397,14 @@ header {
   .promo-items {
     gap: 20px;
     align-items: stretch;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @include respond-to(large) {
+      display: flex;
+    }
+
     .promo-item {
       flex: 0 0 21%;
       border-radius: 10px;
@@ -329,15 +450,23 @@ header {
       width: 100%;
       position: relative;
       padding: 30px 10%;
+      text-align: left;
       p {
         margin-top: 10px;
         display: none;
       }
 
+      h2,
+      p {
+        width: 90%;
+      }
+
       &.active {
         background: $accent-color;
+
         p {
-          display: inline;
+          display: inline-block;
+          margin: 0;
         }
 
         button {
@@ -369,10 +498,18 @@ header {
 
   .customers-aside {
     flex: 0 0 70%;
+
+    display: none;
+    @include respond-to(large) {
+      display: block;
+    }
   }
 
   .customers-content {
-    align-items: flex-start;
+    align-items: center;
+    @include respond-to(large) {
+      align-items: flex-start;
+    }
     gap: 20px;
 
     h1 {
@@ -398,7 +535,7 @@ header {
     .card {
       width: 500px;
       height: 260px;
-      background-color: #fff;
+      background-color: $primary-bg;
       border-radius: 10px;
       padding: 50px 30px;
 
@@ -460,6 +597,10 @@ footer {
     color: $primary-bg;
   }
 
+  p {
+    margin: 0;
+  }
+
   ul {
     list-style: none;
     display: flex;
@@ -474,25 +615,42 @@ footer {
   a {
     display: block;
     color: $secondary-color;
-    margin-bottom: 10;
   }
 
   .info {
+    text-align: left;
     .logo {
       flex-basis: 15%;
       padding: 30px 0;
     }
     p {
-      flex-basis: 30%;
+      flex-basis: 50%;
+
+      @include respond-to(medium) {
+        flex-basis: 40%;
+      }
+
+      @include respond-to(large) {
+        flex-basis: 30%;
+      }
     }
   }
 
   .links {
     align-items: flex-start;
     padding: 60px 0 40px;
-    gap: 40px;
+    gap: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "a b c d"
+      "utility utility utility utility";
     > * {
       flex-grow: 1;
+    }
+
+    @include respond-to(large) {
+      display: flex;
     }
 
     .newsletter {
@@ -522,18 +680,41 @@ footer {
         font-size: 1.5rem;
 
         &:hover {
-          background-color: #ffeeda;
+          background-color: $primary-bg;
         }
       }
     }
   }
 
   .utility {
+    grid-area: utility;
     flex-grow: 0;
+    .utility-items {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    @include respond-to(medium) {
+      .utility-items {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+
+    @include respond-to(large) {
+      .utility-items {
+        flex-direction: column;
+        align-items: stretch;
+      }
+    }
+
     .utility-item {
       padding: 2rem;
       border-radius: 1rem;
       background-color: $secondary-bg;
+      flex-grow: 1;
       gap: 1.5rem;
       img {
         width: 50px;
@@ -542,15 +723,12 @@ footer {
 
       div {
         flex-grow: 1;
+        text-align: left;
 
         h3 {
           color: $primary-bg;
           margin-bottom: 5px;
         }
-      }
-
-      &:not(:first-child) {
-        margin-top: 1.5rem;
       }
     }
   }
