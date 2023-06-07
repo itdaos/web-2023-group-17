@@ -339,17 +339,29 @@ header .header-controls > a:first-child {
   justify-content: flex-end;
 }
 .top-sellers .top-sellers-items .panel .overlay h2 {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
 }
 .top-sellers .top-sellers-items .panel .overlay p {
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 .top-sellers .top-sellers-items .panel .overlay .top-seller-btn {
   border-radius: 10px;
+  font-size: 1rem;
   width: 80%;
   background-color: #fafafa;
   color: #242424;
-  margin-top: 40px;
+  margin-top: 10px;
+}
+@media (min-width: 961px) {
+  .top-sellers .top-sellers-items .panel .overlay h2 {
+    font-size: 2.5rem;
+  }
+  .top-sellers .top-sellers-items .panel .overlay p {
+    font-size: 1.25rem;
+  }
+  .top-sellers .top-sellers-items .panel .overlay .top-seller-btn {
+    margin-top: 40px;
+  }
 }
 
 .promo .promo-items {
@@ -446,7 +458,7 @@ header .header-controls > a:first-child {
 }
 @media (min-width: 1440px) {
   .customers .customers-aside {
-    display: block;
+    display: flex;
   }
 }
 .customers .customers-content {
@@ -593,16 +605,6 @@ footer .links .newsletter h2,
 footer .links .newsletter p {
   width: 75%;
 }
-footer .links .newsletter input {
-  padding: 15px 30px;
-  border-radius: 30px;
-  border: none;
-  margin: 40px 0 20px;
-  font-size: 1.25rem;
-  width: 100%;
-  background-color: #313840;
-  color: #acacac;
-}
 footer .links .newsletter .btn {
   background-color: #ffeeda;
   color: #242424;
@@ -659,4 +661,16 @@ footer .connect {
 footer .connect .copywrite,
 footer .connect .socials {
   gap: 10px;
+}
+
+input,
+textarea {
+  padding: 15px 30px;
+  border-radius: 30px;
+  border: none;
+  margin: 40px 0 20px;
+  font-size: 1.25rem;
+  width: 100%;
+  background-color: #313840;
+  color: #acacac;
 }/*# sourceMappingURL=style.css.map */
