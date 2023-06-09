@@ -468,7 +468,9 @@ header {
       text-align: left;
       p {
         margin-top: 10px;
-        display: none;
+        height: 0px;
+        transition: height 0.5s ease;
+        overflow: hidden;
       }
 
       h2,
@@ -480,7 +482,7 @@ header {
         background: $accent-color;
 
         p {
-          display: inline-block;
+          height: fit-content;
           margin: 0;
         }
 
