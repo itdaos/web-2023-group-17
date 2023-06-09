@@ -417,7 +417,9 @@ header .header-controls > a:first-child {
 }
 .qna .qna-accordeon .qna-accordeon-item p {
   margin-top: 10px;
-  display: none;
+  height: 0px;
+  transition: height 0.5s ease;
+  overflow: hidden;
 }
 .qna .qna-accordeon .qna-accordeon-item h2,
 .qna .qna-accordeon .qna-accordeon-item p {
@@ -427,7 +429,8 @@ header .header-controls > a:first-child {
   background: #ffeeda;
 }
 .qna .qna-accordeon .qna-accordeon-item.active p {
-  display: inline-block;
+  height: -moz-fit-content;
+  height: fit-content;
   margin: 0;
 }
 .qna .qna-accordeon .qna-accordeon-item.active button {

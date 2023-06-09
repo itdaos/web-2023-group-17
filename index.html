@@ -208,7 +208,7 @@
       <div class="container col">
         <h1>Any Questions?</h1>
         <p>Web has almost Common the answers</p>
-        <div class="qna-accordeon col">
+        <div class="qna-accordeon col" id="qna-accordeon">
           <div class="qna-accordeon-item active">
             <h2>Where is your food made?</h2>
             <p>
@@ -266,19 +266,21 @@
             The most rewarding part of our job is hearing from people whose pets
             are living better, more energetic lives.
           </p>
-          <form action="" method="post">
+          <form id="review">
             <textarea
               placeholder="Write your review"
               name="review"
               id="review"
             ></textarea>
 
-            <button href="#" class="btn landing-btn">Leave a Review</button>
+            <button type="submit" class="btn landing-btn">
+              Leave a Review
+            </button>
           </form>
         </div>
         <div class="customers-aside row">
           <div class="customers-aside-stack-container col">
-            <div class="customers-aside-stack">
+            <div class="customers-aside-stack" id="customers-stack">
               <div class="card col">
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse,
@@ -288,7 +290,7 @@
                   placeat? Unde, dolores sapiente?
                 </p>
                 <div class="author">
-                  Aubi & Allie's story
+                  Aubi & Allie's story 1
                   <span class="subcaption">General manager at kalia</span>
                 </div>
               </div>
@@ -300,7 +302,7 @@
                   ipsum quis error sint explicabo odit sed quibusdam id dicta
                   placeat? Unde, dolores sapiente?
                 </p>
-                <span class="author">Aubi & Allie's story</span>
+                <span class="author">Aubi & Allie's story 2</span>
                 <span class="subcaption">General manager at kalia</span>
               </div>
               <div class="card col">
@@ -312,7 +314,7 @@
                   placeat? Unde, dolores sapiente?
                 </p>
                 <div class="author">
-                  Aubi & Allie's story
+                  Aubi & Allie's story 3
                   <span class="subcaption">General manager at kalia</span>
                 </div>
               </div>
@@ -324,14 +326,14 @@
                   ipsum quis error sint explicabo odit sed quibusdam id dicta
                   placeat? Unde, dolores sapiente?
                 </p>
-                <span class="author">Aubi & Allie's story</span>
+                <span class="author">Aubi & Allie's story 4</span>
                 <span class="subcaption">General manager at kalia</span>
               </div>
             </div>
           </div>
 
           <div class="customers-aside-controls row">
-            <div class="controls col">
+            <div class="controls col" id="customers-stack-controls">
               <span class="mdi mdi-menu-up-outline"></span>
               <span class="mdi mdi-menu-down-outline"></span>
             </div>
@@ -356,15 +358,15 @@
           <div class="newsletter">
             <h2>Subscribe to our newsletter</h2>
             <p>Get Kabo promotions and healthy feeding advice for your pet.</p>
-            <form action="" method="post">
+            <form action="" method="post" id="newsletter">
               <input
                 type="email"
                 placeholder="Your Email Address"
-                name="newsletter-email"
+                name="email"
                 id="newsletter-email"
               />
 
-              <button href="#" class="btn landing-btn">Subscribe</button>
+              <button type="submit" class="btn landing-btn">Subscribe</button>
             </form>
           </div>
           <div class="top-categories">
@@ -458,6 +460,6 @@
         </div>
       </div>
     </footer>
-    <script type="module" src="./index.js"></script>
+    <script src="./index.js"></script>
   </body>
 </html>
